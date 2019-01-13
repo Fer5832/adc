@@ -1,0 +1,875 @@
+<html>
+<head>
+<title>Touched By F3r-Ewr</title> 
+<meta property="og:image"content="https://i.ibb.co/vhgRkYW/IMG-20181223-190645-picsay.png"> 
+<meta name="description" content="Jangan Panggil Saya Anak Kecil Paman:v"> <meta name="keywords" content="Manusia Biasa"> 
+<meta http-equiv="cache-control" content="index,cache"> 
+<meta http-equiv="pragma" content="index,cache"> 
+<script>
+alert("Hai:)");
+</script>
+<script type="text/javascript">
+var snowmax=50
+var snowcolor=new Array("#AAAACC","#DDDDFF","#CCCCDD","#F3F3F3","#F0FFFF")
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+var snowletter="*"
+var sinkspeed=0.9
+var snowmaxsize=50
+var snowminsize=8
+var snowingzone=1
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)
+var browserok=ie5||ns6||opera
+function randommaker(range) {
+rand=Math.floor(range*Math.random())
+return rand
+}
+function initsnow() {
+if (ie5 || opera) {
+marginbottom = document.body.clientHeight
+marginright = document.body.clientWidth
+}
+else if (ns6) {
+marginbottom = window.innerHeight
+marginright = window.innerWidth
+}
+var snowsizerange=snowmaxsize-snowminsize
+for (i=0;i<=snowmax;i++) {
+crds[i] = 0;
+lftrght[i] = Math.random()*15;
+x_mv[i] = 0.03 + Math.random()/10;
+snow[i]=document.getElementById("s"+i)
+snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+snow[i].size=randommaker(snowsizerange)+snowminsize
+snow[i].style.fontSize=snow[i].size
+snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+snow[i].sink=sinkspeed*snow[i].size/5
+if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+snow[i].style.left=snow[i].posx
+snow[i].style.top=snow[i].posy
+}
+movesnow()
+}
+function movesnow() {
+for (i=0;i<=snowmax;i++) {
+crds[i] += x_mv[i];
+snow[i].posy+=snow[i].sink
+snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+snow[i].style.top=snow[i].posy
+if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+snow[i].posy=0
+}
+}
+var timer=setTimeout("movesnow()",50)
+}
+for (i=0;i<=snowmax;i++) {
+document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+window.onload=initsnow
+}
+</script>
+<style type="text/css">
+body {background-color:#000000;}
+#q {font: 40px impact;color:#ffffff;}
+</style>
+<table width=100% height=100%>
+<td align=center>
+<font size="20"><script>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#FF0000","#FFFFFF","#FFFFFF","#FF0000");
+farbbibliothek[2] = new Array("#FFFFFF","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#FF0000","#FF0000","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#FF0000","#FDF5E6");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+setTimeout("farbschrift()",30);
+}
+//
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",5000);
+text ="Hacked By F3r-Ewr";//h
+string2array(text);
+divserzeugen();
+//document.write(text);
+</script></font></center></div>
+<br>
+<script>
+alert("Aylopyu:v");
+</script>
+  <style>
+html {
+background: black;
+color: blue;
+text-shadow: 1px 1px black;
+}
+.raped {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  -webkit-animation: noise-3 1s linear infinite;
+          animation: noise-3 1s linear infinite;
+  overflow: default;
+}
+
+.info {
+  text-align: center;
+  width: 200px;
+  height: 1px;
+  margin: 500px;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  -webkit-animation: noise-3 1s linear infinite;
+          animation: noise-3 1s linear infinite;
+}
+
+
+.info:after {
+  content: 'OWNED';
+  font-family: OCR-A;
+  font-size: auto;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 0;
+  opacity: 0;
+  color: white;
+  -webkit-animation: noise-1 .2s linear infinite;
+          animation: noise-1 .2s linear infinite;
+}
+
+@-webkit-keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@-webkit-keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@-webkit-keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
+  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
+  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
+  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
+  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
+}
+
+@-webkit-keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
+  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
+  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
+  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
+  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
+}
+
+.wrap {
+  top: 10%;
+  left: 25%;
+  
+  height: 1px;
+  
+  margin-top: -100px;
+  position: absolute;
+}
+code {
+  color: white;
+}
+span.blue {
+  color: #48beef;
+}
+span.comment {
+  color: #7f8c8d;
+}
+span.orange {
+  color: #f39c12;
+}
+span.green {
+  color: #33cc33;
+}
+
+.viewFull {
+  font-family:OCR-A;
+  color:orange;
+  text-decoration:;
+}
+
+	
+}
+
+ @media only screen and (min-height: 500px) {
+
+.viewFull{
+  display:none; 	
+	}
+
+}
+
+}
+
+ @media only screen and (min-height: 500px) {
+
+.viewFull{
+  display:none; 	
+	}
+
+}
+
+body {
+    background: url("https://i.ibb.co/jZS60wQ/IMG-20190104-172436.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+	cursor: crosshair;
+}
+
+hr {
+	border: 0;
+	height: 50px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))
+}
+
+.asu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20%;
+}
+
+.telo {
+	opacity: 0.80;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 70%;
+	font-size: 20;
+}
+
+.Cparty { 
+	position: absolute; 
+	top:30; 
+	left: 0; 
+	width: 50%;
+}
+</style> 
+ </head> 
+ <body>
+  <table height="10%" width="100%"> 
+   <body>
+    <tr>
+     <p>
+	<br><br><br><br><br><br><br><br><td align="center">
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet" type="text/css">
+ <div id="q">
+   <br><br><br><br><br><br><br><br><br><br><br><center><span class="blinking"><font face ="Shadows Into Light Two" font size ="7">I Lop Yu Gtk:v</font></span></center>
+<style type="text/css">BODY{cursor:none}</style> </font>
+   </div>
+  </center>
+  <font face="Shadows Into Light Two"> 
+   <center> 
+    <style type="text/css">BODY{cursor:none}</style> 
+    <style type="text/css">
+.blinking{
+    animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #ff0027;    }
+    20%{    color: #0c00ff; }
+    40%{    color: white; }
+	60%{    color: #00e800; }
+	80%{    color: red; }
+    100%{   color: #d0ff00;    }
+}
+</style>
+<style>
+
+#container {
+  width: 97vw;
+  margin: 2vw auto;
+}
+
+h1 {
+  text-align: center;
+  color:WHITE;
+  font-size: 3em;
+  letter-spacing: 1px;
+  font-family: 'Iceberg';
+  font-weight: 400;
+  /*Create overlap*/
+  
+  margin: 0;
+  line-height: 0;
+  /*Animation*/
+  
+  -webkit-animation: glitch1 2.5s infinite;
+  
+          animation: glitch1 2.5s infinite;
+}
+
+
+h1:nth-child(2) {
+  color: #67f3da;
+  -webkit-animation: glitch2 2.5s infinite;
+          animation: glitch2 2.5s infinite;
+}
+
+h1:nth-child(3) {
+  color: #f16f6f;
+  -webkit-animation: glitch3 2.5s infinite;
+          animation: glitch3 2.5s infinite;
+}
+/*Keyframes*/
+
+@-webkit-keyframes glitch1 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  7% {
+    -webkit-transform: skew(-0.5deg, -0.9deg);
+            transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: skew(0.8deg, -0.1deg);
+            transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: skew(-1deg, 0.2deg);
+            transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: skew(0.4deg, 1deg);
+            transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch1 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  7% {
+    -webkit-transform: skew(-0.5deg, -0.9deg);
+            transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: skew(0.8deg, -0.1deg);
+            transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: skew(-1deg, 0.2deg);
+            transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: skew(0.4deg, 1deg);
+            transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes glitch2 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    -webkit-transform: translate(-2px, -3px);
+            transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    -webkit-transform: translate(-5px, -2px);
+            transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    -webkit-transform: translate(-5px, -1px);
+            transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    -webkit-transform: translate(-2px, -6px);
+            transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    -webkit-transform: translate(-2px, -3px);
+            transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    -webkit-transform: translate(-5px, -2px);
+            transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    -webkit-transform: translate(-5px, -1px);
+            transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    -webkit-transform: translate(-2px, -6px);
+            transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+}
+mm
+@-webkit-keyframes glitch3 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    -webkit-transform: translate(2px, 3px);
+            transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    -webkit-transform: translate(5px, 2px);
+            transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    -webkit-transform: translate(5px, 1px);
+            transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    -webkit-transform: translate(2px, 6px);
+            transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    -webkit-transform: translate(2px, 3px);
+            transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    -webkit-transform: translate(5px, 2px);
+            transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    -webkit-transform: translate(5px, 1px);
+            transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    -webkit-transform: translate(2px, 6px);
+            transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0.25;
+  }
+}
+ body {
+ background-color: #000;
+    margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;}
+body,a:hover{
+    cursor:url(http://cur.cursors-4u.net/cursors/cur-10/cur949.png),progress!important;
+  }
+</style>
+
+<center><div id="container">
+<h1></h1>
+<h1></h1>
+</center>
+
+
+<br>
+<br>
+<br>
+	
+
+<style>
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+</style>
+<span class="blink">   </span>
+<br><br>
+
+
+<br><span style="visibility: hidden"><iframe widllth="0%" height="0" scrolling="no" frameborder="no" loop="true" allow="autoplay" src="https://b.top4top.net/m_1104o5at38.mp3"></iframe></span></b></font></td></tr></tbody></table></center></a></td></tr></tbody></table></center></body></html>
